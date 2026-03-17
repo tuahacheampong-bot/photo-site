@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="font-['Playfair_Display'] text-2xl tracking-wider text-[#fafafa]">
-          YOUR<span className="text-[#d4a853]">LOGO</span>
+          SHEMEN<span className="text-[#d4a853]">MEDIA</span>
         </Link>
 
         {/* Desktop nav */}

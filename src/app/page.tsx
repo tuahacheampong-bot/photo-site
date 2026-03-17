@@ -1,13 +1,24 @@
 import Link from "next/link";
 
-// Featured categories for the homepage
 const categories = [
-  { name: "Weddings", slug: "weddings", image: "https://picsum.photos/seed/wedding/800/1000" },
-  { name: "Graduations", slug: "graduations", image: "https://picsum.photos/seed/grad/800/1000" },
-  { name: "Events", slug: "events", image: "https://picsum.photos/seed/event/800/1000" },
-  { name: "Portraits", slug: "portraits", image: "https://picsum.photos/seed/portrait/800/1000" },
-  { name: "Pre-Graduation", slug: "pre-graduation", image: "https://picsum.photos/seed/preg/800/1000" },
-  { name: "Babies", slug: "babies", image: "https://picsum.photos/seed/baby/800/1000" },
+  { name: "Portrait", slug: "portrait", image: "https://picsum.photos/seed/portrait/800/1000" },
+  { name: "Wedding", slug: "wedding", image: "https://picsum.photos/seed/wedding/800/1000" },
+  { name: "Event", slug: "event", image: "https://picsum.photos/seed/event/800/1000" },
+  { name: "Graduation", slug: "graduation", image: "https://picsum.photos/seed/grad/800/1000" },
+  { name: "Fashion", slug: "fashion", image: "https://picsum.photos/seed/fashion/800/1000" },
+  { name: "Beauty", slug: "beauty", image: "https://picsum.photos/seed/beauty/800/1000" },
+  { name: "Food", slug: "food", image: "https://picsum.photos/seed/food/800/1000" },
+  { name: "Product", slug: "product", image: "https://picsum.photos/seed/product/800/1000" },
+  { name: "Documentary", slug: "documentary", image: "https://picsum.photos/seed/doc/800/1000" },
+];
+
+const clients = [
+  "Fashion Magazines",
+  "Leading Fashion Houses",
+  "Beauty Brands",
+  "Lifestyle Campaigns",
+  "Non-Profit Organizations",
+  "Corporate Projects",
 ];
 
 export default function Home() {
@@ -15,25 +26,22 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0a0a0a] z-10" />
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('https://picsum.photos/seed/hero/1920/1080')" }}
         />
 
-        {/* Content */}
         <div className="relative z-20 text-center px-6 max-w-4xl mx-auto animate-fade-in">
           <p className="text-[#d4a853] text-sm uppercase tracking-[0.3em] mb-4">
-            Professional Photography
+            Photography &amp; Videography
           </p>
           <h1 className="font-['Playfair_Display'] text-5xl md:text-7xl lg:text-8xl text-white leading-tight mb-6">
-            Capturing Life&apos;s
-            <br />
-            <span className="text-[#d4a853]">Moments</span>
+            Shemen<span className="text-[#d4a853]">Media</span>
           </h1>
           <p className="text-[#a0a0a0] text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Weddings · Graduations · Events · Portraits · Babies
+            Capturing moments that matter and transforming your vision into
+            breathtaking realities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -51,10 +59,46 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
           <div className="w-6 h-10 border-2 border-[#a0a0a0] rounded-full flex items-start justify-center p-1">
             <div className="w-1 h-3 bg-[#d4a853] rounded-full animate-pulse" />
+          </div>
+        </div>
+      </section>
+
+      {/* Tagline */}
+      <section className="py-24 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-[#d4a853] text-sm uppercase tracking-[0.3em] mb-4">
+            About Us
+          </p>
+          <h2 className="font-['Playfair_Display'] text-3xl md:text-4xl text-white mb-6">
+            We Create Timeless Memories
+          </h2>
+          <p className="text-[#a0a0a0] text-lg leading-relaxed">
+            At Shemen Photography, we specialize in capturing moments that matter
+            and transforming your vision into breathtaking realities. Through our
+            exceptional photography and videography services, we create timeless
+            memories that reflect creativity, precision, and excellence.
+          </p>
+        </div>
+      </section>
+
+      {/* Clients */}
+      <section className="py-16 px-6 bg-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-center text-[#d4a853] text-sm uppercase tracking-[0.3em] mb-10">
+            Trusted By
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+            {clients.map((client) => (
+              <div
+                key={client}
+                className="p-4 border border-[#2a2a2a] text-[#a0a0a0] text-sm hover:border-[#d4a853]/50 transition-colors"
+              >
+                {client}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -64,10 +108,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#d4a853] text-sm uppercase tracking-[0.3em] mb-4">
-              My Work
+              Our Expertise
             </p>
             <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl text-white">
-              Browse by Category
+              Browse by Genre
             </h2>
           </div>
 
@@ -98,18 +142,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="py-24 px-6 bg-[#1a1a1a]">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-[#d4a853] text-sm uppercase tracking-[0.3em] mb-4">
-            Ready?
+            Let&apos;s Create Together
           </p>
           <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl text-white mb-6">
-            Let&apos;s Create Something Beautiful
+            Turn Your Vision Into Reality
           </h2>
           <p className="text-[#a0a0a0] text-lg mb-10 max-w-2xl mx-auto">
-            Whether it&apos;s your wedding day, graduation, or a special event —
-            I&apos;m here to capture every moment that matters.
+            Whether it&apos;s a personal milestone, a corporate event, or a creative
+            project — we are here to bring your vision to life. From the first
+            click to the final edit, we are committed to exceeding your
+            expectations with every frame.
           </p>
           <Link
             href="/booking"

@@ -17,21 +17,28 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Your Photography | Capturing Life's Moments",
+  title: "Shemen Media | Photography & Videography",
   description:
-    "Professional photography services for weddings, graduations, events, and portraits. Based in the UK, available worldwide.",
+    "At Shemen Photography, we specialize in capturing moments that matter and transforming your vision into breathtaking realities. Portraits, events, weddings, fashion, and more.",
   keywords: [
+    "Shemen Media",
     "photography",
+    "videography",
     "wedding photographer",
     "graduation photos",
     "event photography",
     "portrait photographer",
-    "UK photographer",
+    "fashion photography",
+    "editorial photography",
+    "beauty photography",
+    "food photography",
+    "product photography",
+    "documentary photography",
   ],
   openGraph: {
-    title: "Your Photography | Capturing Life's Moments",
+    title: "Shemen Media | Photography & Videography",
     description:
-      "Professional photography services for weddings, graduations, events, and portraits.",
+      "We create timeless memories that reflect creativity, precision, and excellence.",
     type: "website",
   },
 };

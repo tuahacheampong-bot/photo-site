@@ -3,11 +3,19 @@
 import { useState } from "react";
 import Image from "next/image";
 
-// Portfolio categories with placeholder images (replace with real photos)
+// Shemen Media portfolio categories
 const portfolioData = {
-  weddings: {
-    title: "Weddings",
-    description: "Your special day, captured forever",
+  portrait: {
+    title: "Portrait",
+    description: "Capturing the essence of who you are",
+    images: Array.from({ length: 6 }, (_, i) => ({
+      src: `https://picsum.photos/seed/portrait${i}/800/1000`,
+      alt: `Portrait photo ${i + 1}`,
+    })),
+  },
+  wedding: {
+    title: "Wedding",
+    description: "Your most beautiful day, forever in frames",
     images: Array.from({ length: 6 }, (_, i) => ({
       src: `https://picsum.photos/seed/wedding${i}/800/1000`,
       alt: `Wedding photo ${i + 1}`,
@@ -21,28 +29,68 @@ const portfolioData = {
       alt: `Pre-graduation photo ${i + 1}`,
     })),
   },
-  graduations: {
-    title: "Graduations",
+  graduation: {
+    title: "Graduation",
     description: "Celebrating your achievement",
     images: Array.from({ length: 6 }, (_, i) => ({
       src: `https://picsum.photos/seed/grad${i}/800/1000`,
       alt: `Graduation photo ${i + 1}`,
     })),
   },
-  events: {
-    title: "Events",
+  event: {
+    title: "Event",
     description: "Moments that bring people together",
     images: Array.from({ length: 6 }, (_, i) => ({
       src: `https://picsum.photos/seed/event${i}/800/1000`,
       alt: `Event photo ${i + 1}`,
     })),
   },
-  babies: {
-    title: "Babies",
-    description: "Little ones, big memories",
+  documentary: {
+    title: "Documentary",
+    description: "Real stories, told through a lens",
     images: Array.from({ length: 6 }, (_, i) => ({
-      src: `https://picsum.photos/seed/baby${i}/800/1000`,
-      alt: `Baby photo ${i + 1}`,
+      src: `https://picsum.photos/seed/doc${i}/800/1000`,
+      alt: `Documentary photo ${i + 1}`,
+    })),
+  },
+  food: {
+    title: "Food",
+    description: "Making every dish a visual feast",
+    images: Array.from({ length: 6 }, (_, i) => ({
+      src: `https://picsum.photos/seed/food${i}/800/1000`,
+      alt: `Food photo ${i + 1}`,
+    })),
+  },
+  product: {
+    title: "Product",
+    description: "Showcasing products at their finest",
+    images: Array.from({ length: 6 }, (_, i) => ({
+      src: `https://picsum.photos/seed/product${i}/800/1000`,
+      alt: `Product photo ${i + 1}`,
+    })),
+  },
+  fashion: {
+    title: "Fashion",
+    description: "Where style meets artistry",
+    images: Array.from({ length: 6 }, (_, i) => ({
+      src: `https://picsum.photos/seed/fashion${i}/800/1000`,
+      alt: `Fashion photo ${i + 1}`,
+    })),
+  },
+  editorial: {
+    title: "Editorial",
+    description: "Stories told through striking imagery",
+    images: Array.from({ length: 6 }, (_, i) => ({
+      src: `https://picsum.photos/seed/editorial${i}/800/1000`,
+      alt: `Editorial photo ${i + 1}`,
+    })),
+  },
+  beauty: {
+    title: "Beauty",
+    description: "Radiance captured in every frame",
+    images: Array.from({ length: 6 }, (_, i) => ({
+      src: `https://picsum.photos/seed/beauty${i}/800/1000`,
+      alt: `Beauty photo ${i + 1}`,
     })),
   },
 };
@@ -50,7 +98,7 @@ const portfolioData = {
 type CategoryKey = keyof typeof portfolioData;
 
 export default function PortfolioPage() {
-  const [activeCategory, setActiveCategory] = useState<CategoryKey>("weddings");
+  const [activeCategory, setActiveCategory] = useState<CategoryKey>("portrait");
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   const categories = Object.entries(portfolioData) as [CategoryKey, typeof portfolioData[CategoryKey]][];
@@ -67,8 +115,9 @@ export default function PortfolioPage() {
             Portfolio
           </h1>
           <p className="text-[#a0a0a0] text-lg max-w-2xl mx-auto">
-            A curated collection of moments from weddings, graduations,
-            events, and everything in between.
+            A diverse portfolio spanning portrait, event, wedding, fashion,
+            editorial, and commercial photography — each genre reflecting
+            our commitment to creativity, precision, and excellence.
           </p>
         </div>
       </section>

@@ -5,19 +5,19 @@ import { useState, FormEvent } from "react";
 const contactInfo = [
   {
     label: "Email",
-    value: "hello@yourphotography.com",
-    href: "mailto:hello@yourphotography.com",
+    value: "hello@shemenmedia.com",
+    href: "mailto:hello@shemenmedia.com",
     icon: "✉",
   },
   {
     label: "Phone",
-    value: "+44 7700 000000",
-    href: "tel:+447700000000",
+    value: "+233 XX XXX XXXX",
+    href: "tel:+233XXXXXXXXXX",
     icon: "☎",
   },
   {
     label: "Location",
-    value: "United Kingdom",
+    value: "Ghana",
     href: null,
     icon: "📍",
   },

@@ -48,11 +48,18 @@ const packages = [
 ];
 
 const serviceTypes = [
+  "Portrait",
   "Wedding",
   "Pre-Graduation",
   "Graduation",
   "Event",
-  "Baby/Portrait",
+  "Documentary",
+  "Food",
+  "Product",
+  "Fashion",
+  "Editorial",
+  "Beauty",
+  "Corporate",
   "Other",
 ];
 

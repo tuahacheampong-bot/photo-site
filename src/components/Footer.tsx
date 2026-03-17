@@ -10,11 +10,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="font-['Playfair_Display'] text-2xl tracking-wider text-[#fafafa] mb-4">
-              YOUR<span className="text-[#d4a853]">LOGO</span>
+              SHEMEN<span className="text-[#d4a853]">MEDIA</span>
             </h3>
             <p className="text-[#a0a0a0] text-sm leading-relaxed">
-              Capturing life&apos;s most precious moments with artistry and passion.
-              Based in the UK, available worldwide.
+              Capturing moments that matter and transforming your vision into
+              breathtaking realities. Photography &amp; videography that tells your story.
             </p>
           </div>
 
@@ -44,7 +44,7 @@ export default function Footer() {
           {/* Social */}
           <div>
             <h4 className="text-sm uppercase tracking-widest text-[#d4a853] mb-4">
-              Follow Me
+              Follow Us
             </h4>
             <div className="flex flex-col gap-2">
               <a
@@ -78,7 +78,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-[#2a2a2a] flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[#606060] text-sm">
-            © {currentYear} Your Photography. All rights reserved.
+            &copy; {currentYear} Shemen Media. All rights reserved.
           </p>
           <p className="text-[#606060] text-sm">
             Built with 📸 and Next.js
